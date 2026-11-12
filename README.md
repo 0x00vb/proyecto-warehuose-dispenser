@@ -1,4 +1,4 @@
-# Dispensador manual — Warehouse USAL
+# Dispensador manual | Warehouse USAL
 
 Firmware para un dispensador operado por una persona, en una parada del depósito. Cuando llega un vehículo, la pantalla muestra el pedido y el operario responde con un botón: **cargado** o **sin stock**.
 
