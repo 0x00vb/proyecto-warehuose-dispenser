@@ -1,0 +1,14 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    command: sh -c "rabbitmq-plugins enable --offline rabbitmq_mqtt >/dev/null && exec rabbitmq-server"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin_admin
+      RABBITMQ_DEFAULT_PASS: admin
+    ports:
+      - "1883:1883"
+      - "127.0.0.1:15672:15672"
+  mqtt:
+    image: eclipse-mosquitto:2
+    profiles: [tools]
+    entrypoint: [mosquitto_sub]
